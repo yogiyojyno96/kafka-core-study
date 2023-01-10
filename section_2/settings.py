@@ -4,7 +4,8 @@ from pydantic import (
 
 
 class Settings(BaseSettings):
-    TEST: str = 'test2'
+    simple_topic: str = "simple-topic"
+    broker_url: str = ""
 
     class Config:
         env_file = '.env'

@@ -1,61 +1,69 @@
-# Section 1 : Kakfa Topic, Producer, Consumer 이해 및 CLI로 실습 해보기
+# Section 1: 섹션 2. Java 기반 Producer 구현 실습 및 Producer 내부 메커니즘 이해 - 01
 
-### 1. 카프카, 시작하며
+### Java 기반에서 Producer 구현하기 - 01
+setting topic 생성
+```shell
+[appuser@broker ~]$ kafka-topics --bootstrap-server localhost:9092 --create --topic simple-topic
+Created topic simple-topic.
+```
+ 
+producer 생성해서 record 생성 후 전송 시도
+- 참고 https://github.com/confluentinc/confluent-kafka-python/blob/master/examples/avro_producer.py
 
-Todo
+진행한 코드 : section_2/simple_producer.py, section_2/settings/py
 
-### 2. Topic과 Partition 그리고 카프카 병렬 분산 처리 개요
+```shell
+Usage: <bootstrap-brokers> : 127.0.0.1:9092 <topic> simple-topic
+test
 
-Todo
+% Message delivered to simple-topic [0] @ 0
+test2
+% Message delivered to simple-topic [0] @ 1
 
-### 3. kafka-topics 명령어를 이용하여 Topic 생성 및 정보 확인하기
+% Message delivered to simple-topic [0] @ 2
 
-Todo
+% Message delivered to simple-topic [0] @ 3
+test3
+% Message delivered to simple-topic [0] @ 4
+```
 
-### 4. Producer와 Consumer 개요
+### Java 기반에서 Producer 구현하기 - 02
 
-Todo
+Todo 
 
-### 5. kafka-console-producer와 kafka-console-consumer로 Producer와 Consumer 실습
+### Producer Java 클라이언트 API 내부를 Intellij Debugger를 이용하여 살짝 뜯어보기
 
-Todo
+Todo 
 
-### 6. Producer의 객체 직렬화(Serializer) 전송의 이해
+### Producer의 메시지 동기화 전송 구현
 
-Todo
+Todo 
 
-### 7. Key값을 가지는 메시지의 전송
+### Callback을 이용한 Producer의 메시지 비동기화 전송 이해
 
-Todo
+Todo 
 
-### 8. 여러 개의 파티션을 가지는 메시지 전송 실습
+### Producer의 메시지 비동기화 전송 구현
 
-Todo
+Todo 
 
-### 10. Key가 없는 메시지의 파티션 분배전략 - 라운드로빈과 스티키 파티셔닝
+### Producer에서 키(Key)값을 가지는 메시지 전송 구현
 
-Todo
+Todo 
 
-### 11. Consumer Group과 Consumer의 이해
+### Producer에서 키(Key) 타입의 변경 및 Custom Callback 구현
 
-Todo
+Todo 
 
-### 12. Consumer Group과 Consumer Rebalancing 실습
+### 피자 주문 시뮬레이션 Producer 구현: 피자 주문 메시지 생성
 
-Todo
+Todo 
 
-### 13. kafka-consumer-groups 명령어로 Consumer Group과 Consumer, Lag 정보 확인하기
+### 피자 주문 시뮬레이션 Producer 구현: 피자 주문 Producer 구현 - 01
 
-Todo
+Todo 
 
-### 14. kafka-consumer-groups 명령어로 Consumer Group 삭제하기
+### 피자 주문 시뮬레이션 Producer 구현: 피자 주문 Producer 구현 - 02
 
-Todo
+Todo 
 
-### 15. 카프카 환경 파라미터의 구분 및 kafka-configs 명령어로 파라미터 검색 및 수정 적용하기
-
-Todo
-
-### 16. kafka-dump-log 명령어로 로그 파일의 메시지 내용 확인하기
-
-Todo
