@@ -32,7 +32,7 @@ if __name__ == '__main__':
         try:
             # Produce line (without newline)
             p.produce(topic, line.rstrip(), callback=delivery_callback)
-            p.poll(0)
+            p.poll(0)  # 이럼 되나? 확인해봐야 할₩
         except BufferError:
             sys.stderr.write('%% Local producer queue is full (%d messages awaiting delivery): try again\n' %
                              len(p))

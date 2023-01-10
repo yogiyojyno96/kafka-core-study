@@ -64,7 +64,7 @@ confleunt kafka producer는 sync 로 따로 구현하는 방법이 없는것 같
 
 ### Producer에서 키(Key)값을 가지는 메시지 전송 구현
 
-Todo
+왜 키값을 지정해서 전송하는가? - 파티션 내 순서보장을 위해 키 값을 지정함
 
 ### Producer에서 키(Key) 타입의 변경 및 Custom Callback 구현
 
