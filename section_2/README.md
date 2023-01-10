@@ -1,6 +1,6 @@
-# Section 1: 섹션 2. Java 기반 Producer 구현 실습 및 Producer 내부 메커니즘 이해 - 01
+# Section 2: Java 기반 Producer 구현 실습 및 Producer 내부 메커니즘 이해 - 01
 
-### Java 기반에서 Producer 구현하기 - 01
+### python 기반에서 Producer 구현하기
 
 setting topic 생성
 
@@ -44,17 +44,13 @@ null
 null    test3
 ```
 
-### Java 기반에서 Producer 구현하기 - 02
-
-Todo
-
-### Producer Java 클라이언트 API 내부를 Intellij Debugger를 이용하여 살짝 뜯어보기
-
-Todo
-
 ### Producer의 메시지 동기화 전송 구현
+기본적으로는 비동기 처리
+그럼 순서 보장이 안되는데? - 하고싶음 동기로 구현하면 됨
+Ack 받은 후 다음 메시지를 전송하도록 구현하면 됨 - 그럼 전송된 메세지의 정보는? callback 함수로 가져올 수 있음
 
-Todo
+동기로는 어떻게 함? - produce 하고 바로 poll 하면 되나? - 아님 produce 하고 flush 하면 되는듯
+
 
 ### Callback을 이용한 Producer의 메시지 비동기화 전송 이해
 
