@@ -54,9 +54,6 @@ Todo
 
 `Idempotence 적용 후 성능이 약간 감소(최대 20%)할 수 있지만 기본적으로 idempotence 적용을 권장`
 
-### idempotence(멱등성) 기반 중복 없이 전송 이해
-
-Todo
 
 ### Producer에 idempotence(중복 없이 전송) 설정 및 설정 시 유의 사항
 
@@ -65,5 +62,8 @@ ask 1 로 바꾸면 기동 실패할 수 있음idempotence 해제될 수 있음 
 ### 커스텀 파티셔너(Custom Partitioner) 구현하기
 
 confluent kafka python 에서는 따로 파티셔너 클래스가 없고 바로 int 로 파티션을 지정할 수 있는 것으로 보임
+
+파티션을 지정하는 것 보다는 키를 지정해서 사용하는 것이 좋아보임 - 파티션을 지정하려면 파티션이 몇번까지 있는지 매번 확인해야 할 수도 있기 때문
+
 
 https://github.com/confluentinc/confluent-kafka-python/blob/1db305460656285cad56c9286a106262545ca573/src/confluent_kafka/serializing_producer.py#L99-L100
