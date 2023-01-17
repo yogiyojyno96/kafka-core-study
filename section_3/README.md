@@ -60,4 +60,10 @@ Todo
 
 ### Producer에 idempotence(중복 없이 전송) 설정 및 설정 시 유의 사항
 
-ask 1 로 바꾸면 기동 실패할 수 있음 - 설정 조심히 변경할 것
+ask 1 로 바꾸면 기동 실패할 수 있음idempotence 해제될 수 있음 - 설정 조심히 변경할 것
+
+### 커스텀 파티셔너(Custom Partitioner) 구현하기
+
+confluent kafka python 에서는 따로 파티셔너 클래스가 없고 바로 int 로 파티션을 지정할 수 있는 것으로 보임
+
+https://github.com/confluentinc/confluent-kafka-python/blob/1db305460656285cad56c9286a106262545ca573/src/confluent_kafka/serializing_producer.py#L99-L100
